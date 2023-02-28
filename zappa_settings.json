@@ -11,7 +11,7 @@
         "runtime": "python3.8",
         "s3_bucket": "zappa-rfi7h872y",
         "events": [{
-            "function": "funciones.py",
+            "function": "apps.f",
             "event_source": {
                   "arn":  "arn:aws:s3:::tallercloud9",
                   "events": [
