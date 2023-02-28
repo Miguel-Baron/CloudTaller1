@@ -9,7 +9,17 @@
         "apigateway_enabled": false,
         "project_name": "ex-zappa2",
         "runtime": "python3.8",
-        "s3_bucket": "zappa-rfi7h872y"
+        "s3_bucket": "zappa-rfi7h872y",
+        "events": [{
+            "function": "funciones.py",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::tallercloud9",
+                  "events": [
+                    "s3:ObjectCreated:*" // Supported event types: http://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#supported-notification-event-types
+                  ]
+                  
+               }
+            }]
 
     },
     "dev_ap_east_1": {
