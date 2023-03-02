@@ -48,5 +48,5 @@ jobs:
             aws-region: us-east-1
       - name: Copiar archivo en Bucket
         run: |
-          aws s3 cp funciones.py s3://bucket.tdd
+          aws s3 cp funciones.py s3://tallercloud9
 
